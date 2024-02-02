@@ -1,0 +1,17 @@
+{
+    "name": "adith/mailer-native",
+    "description": "Mailer test assignment",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adit",
+            "email": "adit.herdityo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "ext-pdo": "*",
+        "cache/memcached-adapter": "^1.2"
+    }
+}
