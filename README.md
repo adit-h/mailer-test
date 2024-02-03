@@ -2,7 +2,11 @@
 
 Mailer Test app.
 
-This is a simple PHP Project with [Vue.js](https://v2.vuejs.org) handling Front-end Form.
+This is a simple PHP Project with [Vue.js](https://v2.vuejs.org) handling Front-end Form and serve as API endpoint
+
+![Web App](test-app.png)
+![API Endpoint](test-api.png)
+
 
 ## Getting Started
 
