@@ -50,24 +50,28 @@ switch ($method) {
             //echo '<h2>Data from Cache:</h2>';
             //print_r($mData);
             if ($mData['email'] === $input['email']) {
-                response(['message' => 'Subscriber exists'], 201);
+                response(['message' => 'Subscriber exists', 'cache' => true], 200);
             } else {
-                InsertData($input);
-                response(['message' => 'Add Success.'], 201);
+                $res = getDataByEmail($input['email']);
+                if ($res) {
+                    response(['message' => 'Subscriber exists', 'cache' => false], 200);
+                } else {
+                    InsertData($input);
+                    response(['message' => 'Add Success.'], 201);
+                }
             }
         } else {
             // query to check email
             $res = getDataByEmail($input['email']);
             if ($res) {
-                response(['message' => 'Subscriber exists'], 201);
+                response(['message' => 'Subscriber exists', 'cache' => false], 200);
             } else {
                 InsertData($input);
                 response(['message' => 'Add Success.'], 201);
             }
-
-            // store to mem
-            $mem->set('data', ['email' => $input['email']]);
         }
+        // store to mem
+        $mem->set('data', ['email' => $input['email']]);
         //response([$input, $mData, $res]);
         break;
 

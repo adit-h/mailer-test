@@ -1,6 +1,6 @@
 // Define baseURL
 //axios.defaults.baseURL = 'http://localhost:8000'
-axios.defaults.baseURL = "http://mailer-native.test";
+axios.defaults.baseURL = "http://mailer-test.test";
 
 // Declare component
 const ViewSubscriber = {

@@ -24,7 +24,7 @@ function getDataByEmail($val)
 {
     global $pdo;
     // query to check email
-    $stmt = $pdo->prepare('SELECT * FROM subscriber WHERE email = :email');
+    $stmt = $pdo->prepare('SELECT * FROM subscriber WHERE email = :email LIMIT 1');
     $stmt->execute(['email' => $val]);
     $res = $stmt->fetch(PDO::FETCH_ASSOC);
 
