@@ -24,3 +24,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 Memcached is required to be run on WebServer. Please make sure you already have this PHP extention also enabled.
 [Memcached setup](https://stackoverflow.com/questions/74913801/how-to-get-memcache-to-work-on-php-with-windows)
 
+Run test on root folder
+```bash
+ ./vendor/bin/phpunit tests ApiTest.php
+```
+

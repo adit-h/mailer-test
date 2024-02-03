@@ -12,6 +12,10 @@
     "require": {
         "php": "^7.3 || ^8.0",
         "ext-pdo": "*",
-        "cache/memcached-adapter": "^1.2"
+        "cache/memcached-adapter": "^1.2",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "10"
     }
 }
