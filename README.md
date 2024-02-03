@@ -10,12 +10,18 @@ This is a simple PHP Project with [Vue.js](https://v2.vuejs.org) handling Front-
 
 ## Getting Started
 
+Environment
+> PHP 8.1 \
+> MySQL 5.7 \
+> Vue 2.5
+
 First, install dependencies:
 
 ```bash
 composer install
 ```
 
+Update app.js base URL value according to your local configuration.
 Copy and rename .env.example to .env and then update database connections settings.
 Create new database name as you like and import the data inside seed.sql.
 
