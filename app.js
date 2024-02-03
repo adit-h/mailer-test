@@ -1,5 +1,4 @@
 // Define baseURL
-//axios.defaults.baseURL = 'http://localhost:8000'
 axios.defaults.baseURL = "http://mailer-test.test";
 
 // Declare component

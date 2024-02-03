@@ -1,6 +1,11 @@
 <?php
 
-$env = parse_ini_file('.env');
+require_once('./vendor/autoload.php');
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 require_once 'core.php';
 require_once 'db.php';
@@ -9,7 +14,7 @@ header("Content-Type:application/json");
 
 // Memcached start
 $mem = new Memcached();
-$mem->addServer('localhost', $env['MC_PORT']);
+$mem->addServer('localhost', $_ENV['MC_PORT']);
 
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
